@@ -1,18 +1,23 @@
-# adding two elements in an array that must be eqaul to the given target and return the element's indices
+# LEVEL : EASY
 
-def example(arr, target):
+#To get the index of elements which are equal to given target when adding the element with another element
+
+def twosum(arr, target):
     n=len(arr)
 
     for i in range(n-1):
         for j in range(i+1, n):
-            if(arr[i]+arr[j]==target):
-                print(f"{[i,j]}")
-        
-inp=int(input("How many elements do you wish to add :"))
+            if (arr[i]+arr[j] == target):
+                print([i,j])
+
+
+
+get=int(input("How many elements do you want to add : "))
 arr=[]
-for x in range(inp):
+for i in range(get):
     arr.append(int(input("Enter the number : ")))
-tg=int(input("Enter a target number : "))
 
-example(arr, tg)
+target=int(input("\nEnter the target : "))
 
+print(arr)
+twosum(arr,target)
